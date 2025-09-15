@@ -10,6 +10,7 @@ import {
   CheckCircle,
   FileSpreadsheet,
   Award,
+  BadgeCheck,
 } from "lucide-react";
 import Heading from "./Heading";
 
@@ -23,9 +24,24 @@ const otherServices = [
 ];
 
 const mainServices = [
-  { title: "Documentation", icon: FileText },
-  { title: "Training", icon: GraduationCap },
-  { title: "Certification", icon: Award },
+  {
+    title: "Documentation",
+    icon: FileText,
+    description:
+      "Organizations use the standard to demonstrate the ability to consistently provide products and services that meet customer and regulatory requirements",
+  },
+  {
+    title: "Training",
+    icon: GraduationCap,
+    description:
+      "(EMS), it provices a framework that an organization can follow, rathor than establishing environmenta performance requirements",
+  },
+  {
+    title: "Certification",
+    icon: BadgeCheck,
+    description:
+      "guidance for its use, to onatto organizations to provide safe and heathy workplaces by preventing work related injury and I health, as well as by proactively Improving : OH&S performance.",
+  },
 ];
 
 const Services = () => {
@@ -64,6 +80,9 @@ const Services = () => {
                   <h3 className="text-lg font-semibold text-gray-700">
                     {service.title}
                   </h3>
+                  <p className="text-gray-500 text-sm mt-2">
+                    {service.description}
+                  </p>
                 </motion.div>
               );
             })}

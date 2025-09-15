@@ -3,14 +3,14 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Hero from "./Hero";
 import Aboutus from "./Aboutus";
-import IsoStandardsCards from "./IsoStandardsCards";
+import ServicesCards from "./ServicesCard";
 
 const Home = () => {
   return (
     <>
       <Navbar />
       <Hero />
-      <IsoStandardsCards />
+      <ServicesCards />
       <Aboutus />
       <Footer />
     </>

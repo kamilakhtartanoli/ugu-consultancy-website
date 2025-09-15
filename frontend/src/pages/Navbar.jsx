@@ -35,8 +35,7 @@ const Navbar = () => {
               className="w-12 h-12 object-contain"
             />
             <div className="leading-tight">
-              <h1 className="text-lg font-bold">UGU</h1>
-              <p className="text-sm font-medium">ISO Services</p>
+              <h1 className="text-lg font-bold">UGU GLOBAL QUALITY SERVICES</h1>
             </div>
           </Link>
 

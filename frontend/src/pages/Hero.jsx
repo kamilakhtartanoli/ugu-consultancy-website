@@ -1,12 +1,16 @@
-import React from "react";
-import { Link } from "react-router"; 
+import React, { useEffect } from "react";
+import { Link } from "react-router";
+import Aos from "aos";
 
 const Hero = () => {
+  useEffect(()=>{
+  Aos.init()
+  },[])
   return (
     <section className="relative w-full h-screen flex items-center">
       {/* Background Image */}
       <img
-        src="/building.webp" 
+        src="/building.webp"
         alt="Hero Background"
         className="absolute inset-0 w-full h-full object-cover"
       />
@@ -15,10 +19,10 @@ const Hero = () => {
       <div className="absolute inset-0 bg-black/60"></div>
 
       {/* Content */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 flex flex-col items-center md:items-start justify-center text-center md:text-left">
         
         {/* Left Content */}
-        <div className="text-white max-w-xl space-y-4 text-center md:text-left mb-8 md:mb-0">
+        <div className="text-white max-w-xl space-y-4" data-aos='fade-right'>
           <h1 className="text-9xl font-extrabold text-[#fef687]">
             UGU
           </h1>
@@ -31,15 +35,6 @@ const Hero = () => {
               Contact Us
             </button>
           </Link>
-        </div>
-
-        {/* Right Logo */}
-        <div className="flex justify-center md:justify-end w-full md:w-auto">
-          <img
-            src="/logo.png" // replace with your logo path
-            alt="UGU Logo"
-            className="w-40 sm:w-52 md:w-72 lg:w-80 opacity-50" // 👈 reduced opacity
-          />
         </div>
       </div>
     </section>
