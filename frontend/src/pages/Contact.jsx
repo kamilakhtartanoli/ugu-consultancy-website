@@ -27,7 +27,7 @@ const Contact = () => {
 
     try {
       const { data } = await axios.post(
-        "https://ugu-consultancy-website-mxbp.vercel.app/api/contact",
+        "https://ugu-consultancy-website.vercel.app/api/contact",
         formData,
         { headers: { "Content-Type": "application/json" } }
       );
