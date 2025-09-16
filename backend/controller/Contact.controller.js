@@ -5,8 +5,8 @@ const Customer = require("../model/customer.model.js");
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: process.env.EMAIL_USER, // your gmail (from .env)
-    pass: process.env.EMAIL_PASS, // app password (not your main password)
+    user: process.env.EMAIL_1USER, // your gmail (from .env)
+    pass: process.env.EMAIL_1PASS, // app password (not your main password)
   },
 });
 const submitContact = async (req, res) => {
