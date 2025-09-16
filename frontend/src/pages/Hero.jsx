@@ -22,7 +22,7 @@ const Hero = () => {
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 flex flex-col items-center md:items-start justify-center text-center md:text-left">
         
         {/* Left Content */}
-        <div className="text-white max-w-xl space-y-4" data-aos='fade-right'>
+        <div className="text-white max-w-xl" data-aos='fade-right'>
           <h1 className="text-9xl font-extrabold text-[#fef687]">
             UGU
           </h1>
