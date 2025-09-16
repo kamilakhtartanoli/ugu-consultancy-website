@@ -41,6 +41,7 @@ const Contact = () => {
           service: "",
           message: "",
         })
+        console.log(data)
         toast.success("Your request has been submitted successfully!");;
       } else {
         toast.error("Something went wrong. Please try again.");

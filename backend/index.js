@@ -8,7 +8,7 @@ const app = express()
 const port = process.env.port || 8001
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
-app.use(cors({ origin: "http://localhost:5173" }));
+app.use(cors());
 app.use('/api',router)
 
 database()

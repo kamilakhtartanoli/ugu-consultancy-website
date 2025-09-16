@@ -1,26 +1,46 @@
 const nodemailer = require("nodemailer");
-const Customer = require("../model/customer.model.js");
+const Customer = require("../model/customer.model");
 
 // setup transporter (using Gmail example)
+
+
+// create transporter
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: process.env.EMAIL_USER, // your gmail (from .env)
-    pass: process.env.EMAIL_PASS, // app password (not your main password)
+    user: process.env.EMAIL_USER, // your Gmail email
+    pass: process.env.EMAIL_PASS, // app password (NOT your main password)
   },
 });
+
+// verify connection (optional, helps debug)
+transporter.verify((error, success) => {
+  if (error) {
+    console.error("Nodemailer connection error:", error);
+  } else {
+    console.log("Nodemailer ready to send emails");
+  }
+});
+
 const submitContact = async (req, res) => {
   try {
     const { name, phone, email, service, message } = req.body;
+
+    if (!name || !phone || !email || !service) {
+      return res.status(400).json({ 
+        success: false, 
+        error: "Name, phone, email, and service are required" 
+      });
+    }
 
     // 1. Save in MongoDB
     const customer = new Customer({ name, phone, email, service, message });
     await customer.save();
 
     // 2. Send email notification
-    await transporter.sendMail({
-      from: `"UGU Services" <${email}>`,
-      to: 'akhtartanoli23@gmail.com', // your business email
+    const mailOptions = {
+      from: `"UGU Services" <${process.env.EMAIL_USER}>`, // must match Gmail account
+      to: "akhtartanoli23@gmail.com", // your business email
       subject: `New Contact Request from ${name}`,
       html: `
         <h2>New Contact Request</h2>
@@ -30,7 +50,9 @@ const submitContact = async (req, res) => {
         <p><strong>Service:</strong> ${service}</p>
         <p><strong>Message:</strong> ${message || "No message"}</p>
       `,
-    });
+    };
+
+    await transporter.sendMail(mailOptions);
 
     res.status(201).json({
       success: true,
@@ -43,6 +65,8 @@ const submitContact = async (req, res) => {
   }
 };
 
-module.exports = {
-    submitContact
+const name = async (req,res)=>{
+  res.send('vercel hello babe')
 }
+
+module.exports = { submitContact ,name };
