@@ -3,7 +3,6 @@ import { Phone, Mail, MapPin } from "lucide-react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Heading from "./Heading";
-import axios from "axios";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -26,11 +25,13 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      const { data } = await axios.post(
-        "https://ugu-consultancy-website.vercel.app/api/contact",
-        formData,
-        { headers: { "Content-Type": "application/json" } }
-      );
+      const response = await fetch("https://ugu-consultancy-website-backend.vercel.app/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
 
       if (data.success) {
         setFormData({
@@ -39,14 +40,13 @@ const Contact = () => {
           email: "",
           service: "",
           message: "",
-        });
-        toast.success("Your request has been submitted successfully!");
+        })
+        toast.success("Your request has been submitted successfully!");;
       } else {
         toast.error("Something went wrong. Please try again.");
       }
     } catch (error) {
       toast.error("Network error. Please try again.");
-      console.error(error);
     } finally {
       setIsSubmitting(false);
     }
