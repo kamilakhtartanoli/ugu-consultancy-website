@@ -13,6 +13,7 @@ import {
   BadgeCheck,
 } from "lucide-react";
 import Heading from "./Heading";
+import { Link } from "react-router";
 
 const otherServices = [
   { title: "Consultation", icon: Briefcase },
@@ -48,7 +49,7 @@ const Services = () => {
   return (
     <>
       <Heading heading={"Services We Offer"} />
-      <section className="py-16 bg-gray-50">
+      <section className="py-16">
         <div className="max-w-6xl mx-auto px-6">
           {/* Main Services */}
           <motion.h3
@@ -59,7 +60,7 @@ const Services = () => {
           >
             Main Services
           </motion.h3>
-          <p className="text-center text-slate-600">
+          <p className="text-center text-gray-800">
             We specialize in all aspect of documentation and are dedicated to
             providing you with exceptional service.
           </p>
@@ -72,17 +73,22 @@ const Services = () => {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-white shadow-md rounded-2xl p-6 flex flex-col items-center text-center hover:shadow-xl transition duration-300"
+                  className="bg-white border-2 border-[#D08700] shadow-md rounded-2xl p-6 flex flex-col items-center text-center hover:shadow-xl transition duration-300"
                 >
                   <div className="w-14 h-14 flex items-center justify-center bg-yellow-100 text-yellow-600 rounded-full mb-4">
                     <Icon size={28} />
                   </div>
-                  <h3 className="text-lg font-semibold text-gray-700">
+                  <h3 className="text-lg font-semibold text-gray-900">
                     {service.title}
                   </h3>
-                  <p className="text-gray-500 text-sm mt-2">
+                  <p className="text-gray-800 text-sm mt-2">
                     {service.description}
                   </p>
+                  <Link to={"/contact"}>
+                    <button className="mt-3 border-gray-200 border-2 hover:bg-[#dfb50d] transition ease-in hover:text-white hover:border-[#dfb50d] px-4 py-2 ">
+                      Contact
+                    </button>
+                  </Link>
                 </motion.div>
               );
             })}
@@ -107,7 +113,7 @@ const Services = () => {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-white shadow-md rounded-2xl p-6 flex flex-col items-center text-center hover:shadow-xl transition duration-300"
+                  className="bg-white border-2 border-[#d087005d]  shadow-md rounded-2xl p-6 flex flex-col items-center text-center hover:shadow-xl transition duration-300"
                 >
                   <div className="w-14 h-14 flex items-center justify-center bg-yellow-100 text-yellow-600 rounded-full mb-4">
                     <Icon size={28} />

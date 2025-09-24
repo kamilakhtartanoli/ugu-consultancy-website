@@ -25,11 +25,14 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("https://ugu-consultancy-website-backend.vercel.app/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        "https://ugu-consultancy-website-gln2.vercel.app/api/contact",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        }
+      );
 
       const data = await response.json();
 
@@ -40,9 +43,9 @@ const Contact = () => {
           email: "",
           service: "",
           message: "",
-        })
-        console.log(data)
-        toast.success("Your request has been submitted successfully!");;
+        });
+        console.log(data);
+        toast.success("Your request has been submitted successfully!");
       } else {
         toast.error("Something went wrong. Please try again.");
       }
@@ -59,7 +62,11 @@ const Contact = () => {
 
       {/* Contact Form Section */}
       <div className="max-w-4xl mx-auto py-12 px-6">
-        <div className="bg-white rounded-lg shadow-lg p-8">
+        <div className="bg-gray-30 rounded-lg shadow-lg p-8">
+         <h2 className="relative text-3xl md:text-4xl font-extrabold text-center py-6 mb-8 md:col-span-2 text-transparent bg-clip-text bg-gradient-to-r from-gray-900 via-gray-800 to-gray-600">
+  How can we help you?
+  <span className="block w-20 h-1 bg-gray-800 mx-auto mt-3 rounded-full"></span>
+</h2>
           <form
             onSubmit={handleSubmit}
             className="grid grid-cols-1 md:grid-cols-2 gap-6"
@@ -71,7 +78,7 @@ const Contact = () => {
               value={formData.name}
               onChange={handleChange}
               required
-              className="border border-gray-400 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="border border-gray-400 rounded-lg px-4 py-3  focus:outline-yellow-600"
             />
             <input
               type="text"
@@ -80,7 +87,7 @@ const Contact = () => {
               value={formData.phone}
               onChange={handleChange}
               required
-              className="border border-gray-400 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="border border-gray-400 rounded-lg px-4 py-3  focus:outline-yellow-600"
             />
             <input
               type="email"
@@ -89,21 +96,31 @@ const Contact = () => {
               value={formData.email}
               onChange={handleChange}
               required
-              className="border border-gray-400 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="border border-gray-400 rounded-lg px-4 py-3  focus:outline-yellow-600"
             />
             <select
               name="service"
               value={formData.service}
               onChange={handleChange}
               required
-              className="border border-gray-400 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="border border-gray-400 rounded-lg px-4 py-3  focus:outline-yellow-600"
             >
               <option value="">What services do you need?</option>
-              <option value="ISO 9001">ISO 9001 - Quality Management System</option>
-              <option value="ISO 14001">ISO 14001 - Environmental Management System</option>
-              <option value="ISO 45001">ISO 45001 - Occupational Health & Safety Management System</option>
-              <option value="ISO 22000">ISO 22000 - Food Safety Management System</option>
-              <option value="ISO 27001">ISO 27001 - Information Security Management System</option>
+              <option value="ISO 9001">
+                ISO 9001 - Quality Management System
+              </option>
+              <option value="ISO 14001">
+                ISO 14001 - Environmental Management System
+              </option>
+              <option value="ISO 45001">
+                ISO 45001 - Occupational Health & Safety Management System
+              </option>
+              <option value="ISO 22000">
+                ISO 22000 - Food Safety Management System
+              </option>
+              <option value="ISO 27001">
+                ISO 27001 - Information Security Management System
+              </option>
             </select>
             <textarea
               name="message"
@@ -111,13 +128,15 @@ const Contact = () => {
               value={formData.message}
               onChange={handleChange}
               rows="5"
-              className="md:col-span-2 border border-gray-400 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="md:col-span-2 border border-gray-400 rounded-lg px-4 py-3 focus:outline-yellow-600"
             />
             <button
               type="submit"
               disabled={isSubmitting}
               className={`md:col-span-2 bg-yellow-600 text-white font-semibold py-3 rounded-lg transition duration-300 ${
-                isSubmitting ? "opacity-50 cursor-not-allowed" : "hover:bg-yellow-700"
+                isSubmitting
+                  ? "opacity-50 cursor-not-allowed"
+                  : "hover:bg-yellow-700"
               }`}
             >
               {isSubmitting ? "Submitting..." : "SEND"}
@@ -128,18 +147,18 @@ const Contact = () => {
 
       {/* Three Boxes Section */}
       <div className="max-w-6xl mx-auto px-6 pb-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div className="bg-[#484b4d] text-white rounded-lg p-6 text-center shadow-lg cursor-pointer">
+        <div className="bg-[#252729] text-white rounded-lg p-6 text-center shadow-lg cursor-pointer">
           <Phone className="w-10 h-10 mx-auto text-[#fef687] mb-3" />
           <h3 className="font-bold text-lg">Phone</h3>
           <p className="text-sm">+971-54-565811</p>
           <p className="text-sm">+971-55-6635832</p>
         </div>
-        <div className="bg-[#484b4d] text-white rounded-lg p-6 text-center shadow-lg cursor-pointer">
+        <div className="bg-[#252729] text-white rounded-lg p-6 text-center shadow-lg cursor-pointer">
           <Mail className="w-10 h-10 mx-auto text-[#fef687] mb-3" />
           <h3 className="font-bold text-lg">Email</h3>
           <p className="text-sm">Uguservices786@gmail.com</p>
         </div>
-        <div className="bg-[#484b4d] text-white rounded-lg p-6 text-center shadow-lg cursor-pointer">
+        <div className="bg-[#252729] text-white rounded-lg p-6 text-center shadow-lg cursor-pointer">
           <MapPin className="w-10 h-10 mx-auto text-[#fef687] mb-3" />
           <h3 className="font-bold text-lg">Address</h3>
           <p className="text-sm">Dubai, United Arab Emirates</p>

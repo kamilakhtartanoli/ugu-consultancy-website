@@ -6,6 +6,7 @@ import Layout from "./pages/Layout.jsx";
 import Services from "./pages/Services.jsx";
 import Contact from "./pages/Contact.jsx";
 import ScrollToTop from "./pages/ScrollToTop.jsx";
+import Standards from "./pages/Standards.jsx";
 
 function App() {
   return (
@@ -36,6 +37,14 @@ function App() {
               <Contact />
             </Layout>
           }
+        />
+        <Route 
+        path="/standards"
+        element={
+          <Layout>
+            <Standards />
+          </Layout>
+        }
         />
       </Routes>
     </>

@@ -7,40 +7,47 @@ const Vision = () => {
   useEffect(() => {
     Aos.init();
   }, []);
+
   return (
-    <section className="py-16 px-6 md:px-16 bg-gray-50">
-      {/* Cards Container */}
+    <section className="py-16 px-6 md:px-16">
       <div className="grid md:grid-cols-2 gap-8">
         {/* Mission Card */}
         <div
-          data-aos="fade-up"
-          className="bg-[#484b4d] rounded-xl shadow-lg p-8 flex flex-col items-start"
+          className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 p-8"
+
         >
-          <Target className="w-10 h-10 mb-4 text-white" />
-          <h2 className="text-2xl font-semibold mb-4 text-[#fef687]">
-            OUR MISSION
-          </h2>
-          <p className="text-lg leading-relaxed text-white">
-            To Deliver Exceptional Services And Adopt Best Practices In The
-            International Market, Becoming The Most Trusted Partner For ISO
-            Certification.
+          <div className="flex items-center gap-3 mb-4">
+            <div className="p-3 bg-yellow-100 rounded-xl">
+              <Target className="w-8 h-8 text-yellow-600" />
+            </div>
+            <h2 className="text-2xl font-semibold text-gray-900">
+              OUR MISSION
+            </h2>
+          </div>
+          <p className="text-lg text-gray-700 leading-relaxed">
+            To deliver exceptional services and adopt best practices in the
+            international market, becoming the most trusted partner for ISO
+            certification.
           </p>
         </div>
 
         {/* Vision Card */}
         <div
-          data-aos="fade-up"
-          className="bg-[#fef687] text-gray-800 rounded-xl shadow-lg p-8 flex flex-col items-start"
+          className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 p-8"
         >
-          <Eye className="w-10 h-10 mb-4 text-[#484b4d]" />
-          <h2 className="text-2xl font-semibold mb-4 text-[#484b4d]">
-            OUR VISION
-          </h2>
-          <p className="text-lg leading-relaxed">
-            Our Vision Is To Deliver Trustworthy, Transparent, And Globally
-            Valued ISO Certification Services That Help Organizations Boost
-            Performance, Achieve Compliance, And Build Long-Term Customer
-            Loyalty.
+          <div className="flex items-center gap-3 mb-4">
+            <div className="p-3 bg-gray-100 rounded-xl">
+              <Eye className="w-8 h-8 text-gray-700" />
+            </div>
+            <h2 className="text-2xl font-semibold text-gray-900">
+              OUR VISION
+            </h2>
+          </div>
+          <p className="text-lg text-gray-700 leading-relaxed">
+            Our vision is to deliver trustworthy, transparent, and globally
+            valued ISO certification services that help organizations boost
+            performance, achieve compliance, and build long-term customer
+            loyalty.
           </p>
         </div>
       </div>
