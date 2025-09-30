@@ -31,15 +31,15 @@ const isoData = [
     image: iso3,
   },
   {
-    title: "ISO 27701",
+    title: "ISO 22301",
     description:
-      "Data Privacy Standards are very essential in the dynamic information technology environment. Privacy Information Management System Certification (ISO 27701) is a must-have.",
+      "ISO 22301 helps organizations prepare for, respond to, and recover from unexpected disruptions.It ensures continuity of critical operations during crises.The standard builds resilience and protects stakeholders’ trust.",
     image: iso4,
   },
   {
-    title: "ISO 20000",
+    title: "ISO 22000",
     description:
-      "ISO 20000:2018 IT Service Management Certification in Dubai enables IT organizations to align their service management processes with international standards and enhance service delivery.",
+      "ISO 22000 is an international standard for food safety management systems that ensures safe food supply chains from farm to fork. It integrates principles of HACCP and risk-based thinking with management system requirements. The standard helps organizations identify, control, and prevent food safety hazards to protect consumers.",
     image: iso5,
   },
   {
@@ -49,9 +49,9 @@ const isoData = [
     image: iso6,
   },
   {
-    title: "ISO 17025",
+    title: "ISO 50001",
     description:
-      "ISO 17025:2017 Laboratory & Testing Centre Certification is ideal for testing, sampling, research, and calibration organizations. It demonstrates quality procedures and testing facilities to a global audience.",
+    "ISO 50001 provides a framework to improve energy efficiency and reduce costs.It helps organizations manage energy performance systematically.The standard supports sustainability and lowers environmental impact.",
     image: iso7,
   },
   {

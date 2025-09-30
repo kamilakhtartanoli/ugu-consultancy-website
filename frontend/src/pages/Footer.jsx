@@ -16,9 +16,9 @@ const Footer = () => {
                 alt="UGU Logo"
                 className="w-20 h-20 md:w-24 md:h-24 object-contain"
               />
-              <h2 className="text-2xl font-bold text-[#ffd111]">UGU</h2>
+              <h2 className="text-4xl font-bold text-yellow-300">UGU</h2>
             </div>
-            <p className="mt-2 text-lg font-semibold">
+            <p className="mt-2 text-xl font-semibold text-white">
               Global Quality Services
             </p>
             <p className="mt-2 text-sm text-gray-300">
@@ -28,7 +28,7 @@ const Footer = () => {
         </Link>
         {/* Quick Links */}
         <div>
-          <h3 className="text-xl font-semibold mb-4 text-[#ffd111]">
+          <h3 className="text-xl font-semibold mb-4 text-yellow-300">
             Quick Links
           </h3>
           <ul className="space-y-2 text-gray-200">
@@ -57,7 +57,7 @@ const Footer = () => {
 
         {/* Contact Info */}
         <div>
-          <h3 className="text-xl font-semibold mb-4 text-[#ffd111]">
+          <h3 className="text-xl font-semibold mb-4 text-yellow-300">
             Contact Us
           </h3>
           <div className="space-y-3 text-gray-200">
@@ -66,12 +66,8 @@ const Footer = () => {
               <span>+971-54-5615811</span>
             </div>
             <div className="flex items-center space-x-3">
-              <Phone size={18} />
-              <span>+971-55-6635832</span>
-            </div>
-            <div className="flex items-center space-x-3">
               <Mail size={18} />
-              <span>Uguservices786@gmail.com</span>
+              <span>Info@uguquality.ae</span>
             </div>
             <div className="flex items-center space-x-3">
               <MapPin size={18} />

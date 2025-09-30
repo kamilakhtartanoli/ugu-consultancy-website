@@ -23,32 +23,31 @@ const Navbar = () => {
     <>
       <nav className="bg-[#252729] text-white sticky top-0 z-50 shadow-md">
         {/* Topbar */}
-        <div className="w-full bg-[#251019] text-white px-4 py-2 flex md:flex-row gap-2 md:gap-6 text-sm md:text-base">
+        <div className="w-full bg-[#251019] text-white px-4 py-1 flex md:flex-row gap-2 md:gap-6 text-sm md:text-base">
           <span className="flex items-center gap-2">
             <Phone className="w-4 h-4 md:w-5 md:h-5 text-yellow-400" />
             +971-54-5615811
-          </span>
-          <span className="flex items-center gap-2">
-            <Phone className="w-4 h-4 md:w-5 md:h-5 text-yellow-400" />
-            +971-55-6635832
           </span>
         </div>
 
         {/* Navbar main */}
         <div className="flex justify-between items-center px-7 py-4">
           {/* Logo */}
-          <NavLink to="/" className="flex items-center gap-3">
-            <img
-              src={logo}
-              alt="UGU Logo"
-              className="w-17 h-17 md:h-24 md:w-24"
-            />
-            <div className="leading-tight">
-              <h1 className="text-lg font-bold">
-                UGU GLOBAL QUALITY SERVICES
-              </h1>
-            </div>
-          </NavLink>
+         <NavLink to="/" className="flex items-center gap-3">
+  {/* ✅ Responsive Logo */}
+  <img
+    src={logo}
+    alt="UGU Logo"
+    className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 xl:w-28 xl:h-28"
+  />
+
+  {/* ✅ Responsive Title */}
+  <div className="leading-tight">
+    <h1 className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-yellow-300 font-bold">
+      UGU GLOBAL QUALITY SERVICES
+    </h1>
+  </div>
+</NavLink>
 
           {/* Desktop Menu */}
           <ul className="hidden md:flex gap-8">

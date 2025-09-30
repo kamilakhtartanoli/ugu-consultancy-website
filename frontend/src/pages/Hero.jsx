@@ -27,7 +27,7 @@ const Hero = () => {
             className="text-white flex flex-col items-center md:items-start text-center md:text-left gap-4"
             data-aos="fade-right"
           >
-            <h1 className="text-8xl xl:text-[140px] font-extrabold text-white drop-shadow-[0_5px_15px_rgba(0,0,0,0.8)]">
+            <h1 className="text-8xl xl:text-[150px] font-extrabold text-white drop-shadow-[0_5px_15px_rgba(0,0,0,0.8)]">
               UGU
             </h1>
 

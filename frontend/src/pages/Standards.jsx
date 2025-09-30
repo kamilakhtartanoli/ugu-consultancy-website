@@ -44,12 +44,13 @@ const isoData = [
     image: iso3,
   },
   {
-    title: "ISO 27701 – Privacy Information Management",
+    title: "ISO 22301 – Business Continuity Management",
     description: `
-      ISO 27701 strengthens data privacy systems and ensures GDPR/CCPA compliance.
+      ISO 22301 ensures organizations can continue operations during disruptions 
+      by preparing, responding, and recovering effectively from crises.
     `,
-    benefits: ["Data security", "Regulatory compliance", "Customer trust"],
-    industries: ["IT", "Finance", "Healthcare", "E-commerce"],
+    benefits: ["Business resilience", "Crisis preparedness", "Stakeholder confidence"],
+    industries: ["Banks", "IT", "Healthcare", "Government", "Manufacturing"],
     image: iso4,
   },
   {
@@ -72,12 +73,13 @@ const isoData = [
     image: iso6,
   },
   {
-    title: "ISO 17025 – Laboratory Competence",
+    title: "ISO 50001 – Energy Management System",
     description: `
-      ISO 17025:2017 certifies labs for technical competence and reliable results.
+      ISO 50001 helps organizations systematically improve energy performance, 
+      reduce costs, and minimize environmental impact.
     `,
-    benefits: ["International credibility", "Better client trust", "Accuracy"],
-    industries: ["Testing Labs", "Calibration Centers", "Research Facilities"],
+    benefits: ["Energy efficiency", "Cost reduction", "Sustainability"],
+    industries: ["Manufacturing", "Construction", "Hospitality", "Oil & Gas"],
     image: iso7,
   },
   {
