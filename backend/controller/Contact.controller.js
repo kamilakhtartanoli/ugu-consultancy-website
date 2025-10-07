@@ -65,8 +65,5 @@ const submitContact = async (req, res) => {
   }
 };
 
-const name = async (req,res)=>{
-  res.send('vercel hello babe')
-}
 
-module.exports = { submitContact ,name };
+module.exports = { submitContact };
