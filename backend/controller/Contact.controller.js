@@ -40,7 +40,7 @@ const submitContact = async (req, res) => {
     // 2. Send email notification
     const mailOptions = {
       from: `"UGU Services" <${process.env.EMAIL_USER}>`, // must match Gmail account
-      to: "akhtartanoli23@gmail.com", // your business email
+      to: `${process.env.EMAIL_USER}`, // your business email
       subject: `New Contact Request from ${name}`,
       html: `
         <h2>New Contact Request</h2>
