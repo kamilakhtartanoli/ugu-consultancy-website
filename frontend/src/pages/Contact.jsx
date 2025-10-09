@@ -3,6 +3,7 @@ import { Phone, Mail, MapPin } from "lucide-react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Heading from "./Heading";
+import { FaWhatsapp } from "react-icons/fa";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -49,7 +50,8 @@ const Contact = () => {
         toast.error("Something went wrong. Please try again.");
       }
     } catch (error) {
-      toast.error("Network error. Please try again.");
+      toast.error(error.message);
+      console.log(error.message)
     } finally {
       setIsSubmitting(false);
     }
@@ -155,15 +157,26 @@ const Contact = () => {
 
       {/* Three Boxes Section */}
       <div className="max-w-6xl mx-auto px-6 pb-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div className="bg-[#252729] text-white rounded-lg p-6 text-center shadow-lg cursor-pointer">
+          <div className="bg-[#252729] text-white rounded-lg p-6 text-center shadow-lg">
           <Phone className="w-10 h-10 mx-auto text-[#fef687] mb-3" />
           <h3 className="font-bold text-lg">Phone</h3>
           <p className="text-sm">+971-54-565811</p>
+          
+          {/* WhatsApp Icon */}
+          <a
+            href="https://wa.me/97154565811" // ✅ WhatsApp link (without +)
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex justify-center items-center gap-2 mt-2 text-green-400 hover:text-green-500"
+          >
+            <FaWhatsapp className="w-6 h-6" />
+            <span>WhatsApp</span>
+          </a>
         </div>
         <div className="bg-[#252729] text-white rounded-lg p-6 text-center shadow-lg cursor-pointer">
           <Mail className="w-10 h-10 mx-auto text-[#fef687] mb-3" />
           <h3 className="font-bold text-lg">Email</h3>
-          <p className="text-sm">Info@uguquality.ae</p>
+          <p className="text-sm">Uguservices786@gmail.com</p>
         </div>
         <div className="bg-[#252729] text-white rounded-lg p-6 text-center shadow-lg cursor-pointer">
           <MapPin className="w-10 h-10 mx-auto text-[#fef687] mb-3" />

@@ -1,7 +1,7 @@
 import { Phone } from "lucide-react";
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom"; // 👈 use NavLink instead of Link
-import logo from '../assets/logo.webp'
+import { FaWhatsapp } from "react-icons/fa"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,12 +23,24 @@ const Navbar = () => {
     <>
       <nav className="bg-[#252729] text-white sticky top-0 z-50 shadow-md">
         {/* Topbar */}
-        <div className="w-full bg-[#251019] text-white px-4 py-1 flex md:flex-row gap-2 md:gap-6 text-sm md:text-base">
-          <span className="flex items-center gap-2">
-            <Phone className="w-4 h-4 md:w-5 md:h-5 text-yellow-400" />
-            +971-54-5615811
-          </span>
-        </div>
+       <div className="w-full bg-[#251019] text-white px-4 py-1 flex md:flex-row gap-2 md:gap-6 text-sm md:text-base">
+      {/* Phone Number */}
+      <span className="flex items-center gap-2">
+        <Phone className="w-4 h-4 md:w-5 md:h-5 text-yellow-400" />
+        +971-54-5615811
+      </span>
+
+      {/* WhatsApp */}
+      <a
+        href="https://wa.me/971545615811" 
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center gap-2 hover:text-green-400"
+      >
+        <FaWhatsapp className="w-4 h-4 md:w-5 md:h-5 text-green-400" />
+        WhatsApp
+      </a>
+    </div>
 
         {/* Navbar main */}
         <div className="flex justify-between items-center px-7 py-4">
@@ -36,7 +48,7 @@ const Navbar = () => {
          <NavLink to="/" className="flex items-center gap-3">
   {/* ✅ Responsive Logo */}
   <img
-    src={logo}
+    src="https://res.cloudinary.com/diocbqpbj/image/upload/q_auto,f_auto/v1759467528/logo_jwpsjx.webp"
     alt="UGU Logo"
     className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 xl:w-28 xl:h-28"
   />

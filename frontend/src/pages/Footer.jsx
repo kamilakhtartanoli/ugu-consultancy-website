@@ -1,7 +1,7 @@
 import React from "react";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { Link } from "react-router";
-import logo from '../assets/logo.webp'
+
 
 const Footer = () => {
   return (
@@ -12,7 +12,7 @@ const Footer = () => {
           <div>
             <div className="flex items-center space-x-3">
               <img
-                src={logo}
+                src='https://res.cloudinary.com/diocbqpbj/image/upload/q_auto,f_auto/v1759467528/logo_jwpsjx.webp'
                 alt="UGU Logo"
                 className="w-20 h-20 md:w-24 md:h-24 object-contain"
               />
@@ -67,7 +67,7 @@ const Footer = () => {
             </div>
             <div className="flex items-center space-x-3">
               <Mail size={18} />
-              <span>Info@uguquality.ae</span>
+              <span>Uguservices786@gmail.com</span>
             </div>
             <div className="flex items-center space-x-3">
               <MapPin size={18} />

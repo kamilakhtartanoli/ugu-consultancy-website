@@ -3,7 +3,6 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import Vision from "./Vision.jsx";
 import Heading from "./Heading.jsx";
-import about from '../assets/about1.webp'
 import CoreValues from "./CoreValues.jsx";
 import WorkingProcess from "./WorkingProcess.jsx";
 
@@ -20,7 +19,7 @@ const Aboutus = () => {
           {/* Left: Image */}
           <div>
             <img
-              src={about}
+              src="https://res.cloudinary.com/diocbqpbj/image/upload/q_auto,f_auto/v1759467381/aaa_g8j9xw.webp"
               alt="About UGU"
               className="rounded-xl shadow-lg object-cover w-full h-[250px] md:h-[350px]"
             />
