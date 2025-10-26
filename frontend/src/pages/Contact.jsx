@@ -177,6 +177,7 @@ const Contact = () => {
           <Mail className="w-10 h-10 mx-auto text-[#fef687] mb-3" />
           <h3 className="font-bold text-lg">Email</h3>
           <p className="text-sm">Uguservices786@gmail.com</p>
+          <p className="text-sm">Info@uguquality.ae</p>
         </div>
         <div className="bg-[#252729] text-white rounded-lg p-6 text-center shadow-lg cursor-pointer">
           <MapPin className="w-10 h-10 mx-auto text-[#fef687] mb-3" />

@@ -26,22 +26,22 @@ const otherServices = [
 
 const mainServices = [
   {
-    title: "Documentation",
+    title: "Consultation",
     icon: FileText,
     description:
-      "Organizations use the standard to demonstrate the ability to consistently provide products and services that meet customer and regulatory requirements",
+      "ISO Consultation service provides expert guidance to help your organization implement, maintain, or improve ISO management systems such as ISO 9001 (Quality Management), ISO 14001 (Environmental Management), ISO 45001 (Occupational Health & Safety), and more. We work closely with your team to ensure compliance with international standards, streamline processes, and prepare for successful certification",
   },
   {
     title: "Training",
     icon: GraduationCap,
     description:
-      "(EMS), it provices a framework that an organization can follow, rathor than establishing environmenta performance requirements",
+      "Our ISO Internal Auditor Training equips participants with the knowledge and practical skills needed to effectively plan, conduct, report, and follow up on internal audits based on ISO standards such as ISO 9001, ISO 14001, ISO 45001, and others. This interactive course is designed for individuals responsible for auditing management systems or those seeking to become certified internal auditors. It provides a solid understanding of audit principles in line with ISO 19011 (Guidelines for Auditing Management Systems) and focuses on real-world application within your organization.",
   },
   {
     title: "Certification",
     icon: BadgeCheck,
     description:
-      "guidance for its use, to onatto organizations to provide safe and heathy workplaces by preventing work related injury and I health, as well as by proactively Improving : OH&S performance.",
+      "ISO Certification is a formal recognition that an organization’s management system, processes, or services meet international standards for quality, safety, efficiency, or environmental responsibility. Achieving ISO certification demonstrates your commitment to excellence, compliance, and continual improvement.",
   },
 ];
 
@@ -64,7 +64,7 @@ const Services = () => {
             We specialize in all aspect of documentation and are dedicated to
             providing you with exceptional service.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-15 mt-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-15 mt-6">
             {mainServices.map((service, index) => {
               const Icon = service.icon;
               return (

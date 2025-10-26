@@ -20,8 +20,18 @@ const isoData = [
       It helps organizations enhance product and service quality, increase efficiency, 
       and improve customer satisfaction.
     `,
-    benefits: ["Better process control", "Improved efficiency", "Global recognition"],
-    industries: ["Manufacturing", "Trading", "Education", "Healthcare", "Services"],
+    benefits: [
+      "Better process control",
+      "Improved efficiency",
+      "Global recognition",
+    ],
+    industries: [
+      "Manufacturing",
+      "Trading",
+      "Education",
+      "Healthcare",
+      "Services",
+    ],
     image: iso1,
   },
   {
@@ -49,17 +59,26 @@ const isoData = [
       ISO 22301 ensures organizations can continue operations during disruptions 
       by preparing, responding, and recovering effectively from crises.
     `,
-    benefits: ["Business resilience", "Crisis preparedness", "Stakeholder confidence"],
+    benefits: [
+      "Business resilience",
+      "Crisis preparedness",
+      "Stakeholder confidence",
+    ],
     industries: ["Banks", "IT", "Healthcare", "Government", "Manufacturing"],
     image: iso4,
   },
   {
-    title: "ISO 20000 – IT Service Management",
+    title: "ISO 22000 – Food Safety Management",
     description: `
-      ISO 20000-1:2018 standardizes IT service delivery and aligns it with business needs.
-    `,
-    benefits: ["Improved IT governance", "Cost-effective service management"],
-    industries: ["IT Companies", "Software Houses", "Telecom"],
+    ISO 22000:2018 sets requirements for a food safety management system 
+    to ensure safe food supply chains by controlling hazards at every stage.
+  `,
+    benefits: [
+      "Food safety assurance",
+      "Regulatory compliance",
+      "Customer trust",
+    ],
+    industries: ["Food Production", "Restaurants", "Catering", "Beverages"],
     image: iso5,
   },
   {
@@ -104,8 +123,9 @@ const Standards = () => {
             ISO Certifications We Provide
           </h2>
           <p className="text-gray-600 mt-3 max-w-2xl mx-auto">
-            Our ISO Certification services in UAE cover a wide range of standards 
-            to enhance business performance, compliance, and global credibility.
+            Our ISO Certification services in UAE cover a wide range of
+            standards to enhance business performance, compliance, and global
+            credibility.
           </p>
         </div>
 
@@ -141,7 +161,8 @@ const Standards = () => {
                 {/* Benefits */}
                 <div className="mb-4">
                   <h4 className="font-semibold text-gray-800 flex items-center gap-2">
-                    <CheckCircle size={18} className="text-yellow-500" /> Benefits
+                    <CheckCircle size={18} className="text-yellow-500" />{" "}
+                    Benefits
                   </h4>
                   <ul className="list-none mt-2 space-y-1 text-gray-600 text-sm">
                     {iso.benefits.map((b, i) => (

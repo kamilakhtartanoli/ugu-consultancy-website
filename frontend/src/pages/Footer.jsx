@@ -70,6 +70,10 @@ const Footer = () => {
               <span>Uguservices786@gmail.com</span>
             </div>
             <div className="flex items-center space-x-3">
+              <Mail size={18} />
+              <span>Info@uguquality.ae</span>
+            </div>
+            <div className="flex items-center space-x-3">
               <MapPin size={18} />
               <span>Abu Dhabi, Hamdan St</span>
             </div>
