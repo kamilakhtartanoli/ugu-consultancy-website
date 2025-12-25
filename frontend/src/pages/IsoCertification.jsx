@@ -28,7 +28,7 @@ const IsoCertification = () => {
               href="mailto:info@aurioninternational.com"
               className="text-yellow-600 font-semibold hover:underline"
             >
-              Uguservices786@gmail.com
+              Info@uguquality.ae
             </a>
             <span className="font-bold">
               . The highly professional ISO Consultants will guide you from the

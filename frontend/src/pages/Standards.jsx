@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router";
-import { CheckCircle, ShieldCheck, Globe2 } from "lucide-react"; // Professional icons
+import { CheckCircle, ShieldCheck, Globe2, Phone } from "lucide-react"; // Professional icons
 
 // ✅ Import images
 import iso1 from "../assets/iso1.webp";
@@ -11,6 +11,7 @@ import iso5 from "../assets/iso5.webp";
 import iso6 from "../assets/iso6.webp";
 import iso7 from "../assets/iso7.webp";
 import iso8 from "../assets/iso8.webp";
+import { FaWhatsapp } from "react-icons/fa";
 
 const isoData = [
   {
@@ -115,7 +116,7 @@ const isoData = [
 
 const Standards = () => {
   return (
-    <section className="w-full py-16 bg-gray-50">
+    <section className="w-full py-16 bg-gray-50 mt-15">
       <div className="max-w-6xl mx-auto px-6 md:px-12">
         {/* Heading */}
         <div className="text-center mb-14">
@@ -201,6 +202,23 @@ const Standards = () => {
             </div>
           ))}
         </div>
+      </div>
+       <div className="fixed bottom-8 right-8 flex flex-col gap-4 z-50">
+        <a
+          href="tel:+971545615811"
+          className="w-14 h-14 flex items-center justify-center rounded-full bg-black/80 backdrop-blur-md hover:bg-yellow-100  transition shadow-lg"
+        >
+          <Phone className="w-6 h-6 text-red-400" />
+        </a>
+
+        <a
+          href="https://wa.me/971545615811"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-14 h-14 flex items-center justify-center rounded-full bg-black/80 backdrop-blur-md hover:bg-green-500/30 transition shadow-lg"
+        >
+          <FaWhatsapp className="w-6 h-6 text-green-400" />
+        </a>
       </div>
     </section>
   );

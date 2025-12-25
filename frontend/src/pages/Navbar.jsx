@@ -1,150 +1,74 @@
-import { Phone } from "lucide-react";
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom"; // 👈 use NavLink instead of Link
-import { FaWhatsapp } from "react-icons/fa"
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  // Close menu after clicking a link
-  const handleLinkClick = () => {
-    setIsOpen(false);
-  };
-
-  // Function to set active/inactive styles
   const navLinkClasses = ({ isActive }) =>
-    `cursor-pointer px-3 py-2 rounded-3xl font-semibold transition ${
+    `px-4 py-2 text-sm font-semibold rounded-xl transition ${
       isActive
         ? "bg-[#ffd111] text-black"
-        : "hover:bg-[#ffd111] hover:text-black"
+        : "text-white hover:bg-[#ffd111] hover:text-black"
     }`;
 
   return (
-    <>
-      <nav className="bg-[#252729] text-white sticky top-0 z-50 shadow-md">
-        {/* Topbar */}
-       <div className="w-full bg-[#251019] text-white px-4 py-1 flex md:flex-row gap-2 md:gap-6 text-sm md:text-base">
-      {/* Phone Number */}
-      <span className="flex items-center gap-2">
-        <Phone className="w-4 h-4 md:w-5 md:h-5 text-yellow-400" />
-        +971-54-5615811
-      </span>
+    <header className="fixed top-0 left-0 z-50 w-full bg-black/100 backdrop-blur-sm shadow-md">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        {/* Logo */}
+        <Link to="/" className="flex items-center gap-3">
+          <img
+            src="https://res.cloudinary.com/diocbqpbj/image/upload/q_auto,f_auto/v1759467528/logo_jwpsjx.webp"
+            alt="UGU Logo"
+            className="w-12 h-12 md:w-18 md:h-18"
+          />
+          <span className="text-yellow-500 font-extrabold tracking-wide text-lg sm:text-xl md:text-2xl lg:text-3xl">
+            UGU GLOBAL QUALITY SERVICES
+          </span>
+        </Link>
 
-      {/* WhatsApp */}
-      <a
-        href="https://wa.me/971545615811" 
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex items-center gap-2 hover:text-green-400"
-      >
-        <FaWhatsapp className="w-4 h-4 md:w-5 md:h-5 text-green-400" />
-        WhatsApp
-      </a>
-    </div>
+        {/* Desktop Nav Links */}
+        <nav className="hidden md:flex gap-4">
+          <NavLink to="/" className={navLinkClasses}>
+            Home
+          </NavLink>
+          <NavLink to="/about" className={navLinkClasses}>
+            About
+          </NavLink>
+          <NavLink to="/services" className={navLinkClasses}>
+            Services
+          </NavLink>
+          <NavLink to="/contact" className={navLinkClasses}>
+            Contact
+          </NavLink>
+        </nav>
 
-        {/* Navbar main */}
-        <div className="flex justify-between items-center px-7 py-4">
-          {/* Logo */}
-         <NavLink to="/" className="flex items-center gap-3">
-  {/* ✅ Responsive Logo */}
-  <img
-    src="https://res.cloudinary.com/diocbqpbj/image/upload/q_auto,f_auto/v1759467528/logo_jwpsjx.webp"
-    alt="UGU Logo"
-    className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 xl:w-28 xl:h-28"
-  />
+        {/* Mobile Menu Button */}
+        <button
+          className="md:hidden text-yellow-500 text-3xl"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          {menuOpen ? "✕" : "☰"}
+        </button>
+      </div>
 
-  {/* ✅ Responsive Title */}
-  <div className="leading-tight">
-    <h1 className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-yellow-300 font-bold">
-      UGU GLOBAL QUALITY SERVICES
-    </h1>
-  </div>
-</NavLink>
-
-          {/* Desktop Menu */}
-          <ul className="hidden md:flex gap-8">
-            <NavLink to="/" className={navLinkClasses}>
-              Home
-            </NavLink>
-            <NavLink to="/about" className={navLinkClasses}>
-              About
-            </NavLink>
-            <NavLink to="/services" className={navLinkClasses}>
-              Services
-            </NavLink>
-            <NavLink to="/contact" className={navLinkClasses}>
-              Contact
-            </NavLink>
-          </ul>
-
-          {/* Mobile Menu Button */}
-       <button
-  className="md:hidden focus:outline-none"
-  onClick={() => setIsOpen(!isOpen)}
->
-  {isOpen ? (
-    <svg
-      className="w-10 h-10" // ⬅️ bigger size
-      fill="none"
-      stroke="currentColor"
-      viewBox="0 0 24 24"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={2}
-        d="M6 18L18 6M6 6l12 12"
-      />
-    </svg>
-  ) : (
-    <svg
-      className="w-10 h-10" // ⬅️ bigger size
-      fill="none"
-      stroke="currentColor"
-      viewBox="0 0 24 24"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={2}
-        d="M4 6h16M4 12h16M4 18h16"
-      />
-    </svg>
-  )}
-</button>
+      {/* Mobile Menu */}
+      {menuOpen && (
+        <div className="md:hidden mx-6 mt-2 px-6 py-4 bg-black/60 backdrop-blur-sm rounded-xl flex flex-col gap-3">
+          <NavLink onClick={() => setMenuOpen(false)} to="/" className={navLinkClasses}>
+            Home
+          </NavLink>
+          <NavLink onClick={() => setMenuOpen(false)} to="/about" className={navLinkClasses}>
+            About
+          </NavLink>
+          <NavLink onClick={() => setMenuOpen(false)} to="/services" className={navLinkClasses}>
+            Services
+          </NavLink>
+          <NavLink onClick={() => setMenuOpen(false)} to="/contact" className={navLinkClasses}>
+            Contact
+          </NavLink>
         </div>
-
-        {/* Mobile Dropdown Menu */}
-        {isOpen && (
-          <ul className="flex flex-col md:hidden px-5 py-2 pb-4 gap-2 border-t-2 border-[#dfd111] bg-[#252729]/90 backdrop-blur-md transition ease-in">
-            <NavLink to="/" onClick={handleLinkClick} className={navLinkClasses}>
-              Home
-            </NavLink>
-            <NavLink
-              to="/about"
-              onClick={handleLinkClick}
-              className={navLinkClasses}
-            >
-              About Us
-            </NavLink>
-            <NavLink
-              to="/services"
-              onClick={handleLinkClick}
-              className={navLinkClasses}
-            >
-              Services
-            </NavLink>
-            <NavLink
-              to="/contact"
-              onClick={handleLinkClick}
-              className={navLinkClasses}
-            >
-              Contact Us
-            </NavLink>
-          </ul>
-        )}
-      </nav>
-    </>
+      )}
+    </header>
   );
 };
 

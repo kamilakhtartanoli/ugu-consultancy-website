@@ -11,9 +11,11 @@ import {
   FileSpreadsheet,
   Award,
   BadgeCheck,
+  Phone,
 } from "lucide-react";
 import Heading from "./Heading";
 import { Link } from "react-router";
+import { FaWhatsapp } from "react-icons/fa";
 
 const otherServices = [
   { title: "Consultation", icon: Briefcase },
@@ -126,6 +128,23 @@ const Services = () => {
             })}
           </div>
         </div>
+         <div className="fixed bottom-8 right-8 flex flex-col gap-4 z-50">
+        <a
+          href="tel:+971545615811"
+          className="w-14 h-14 flex items-center justify-center rounded-full bg-black/80 backdrop-blur-md hover:bg-yellow-100  transition shadow-lg"
+        >
+          <Phone className="w-6 h-6 text-red-400" />
+        </a>
+
+        <a
+          href="https://wa.me/971545615811"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-14 h-14 flex items-center justify-center rounded-full bg-black/80 backdrop-blur-md hover:bg-green-500/30 transition shadow-lg"
+        >
+          <FaWhatsapp className="w-6 h-6 text-green-400" />
+        </a>
+      </div>
       </section>
     </>
   );

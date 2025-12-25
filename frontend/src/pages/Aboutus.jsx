@@ -5,6 +5,8 @@ import Vision from "./Vision.jsx";
 import Heading from "./Heading.jsx";
 import CoreValues from "./CoreValues.jsx";
 import WorkingProcess from "./WorkingProcess.jsx";
+import { FaWhatsapp } from "react-icons/fa";
+import { Phone } from "lucide-react";
 
 const Aboutus = () => {
   useEffect(() => {
@@ -52,6 +54,23 @@ const Aboutus = () => {
         </div>
         <WorkingProcess />
         <CoreValues />
+         <div className="fixed bottom-8 right-8 flex flex-col gap-4 z-50">
+                <a
+                  href="tel:+971545615811"
+                  className="w-14 h-14 flex items-center justify-center rounded-full bg-black/80 backdrop-blur-md hover:bg-yellow-100  transition shadow-lg"
+                >
+                  <Phone className="w-6 h-6 text-red-400" />
+                </a>
+        
+                <a
+                  href="https://wa.me/971545615811"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-14 h-14 flex items-center justify-center rounded-full bg-black/80 backdrop-blur-md hover:bg-green-500/30 transition shadow-lg"
+                >
+                  <FaWhatsapp className="w-6 h-6 text-green-400" />
+                </a>
+              </div>
       </section>
     </>
   );

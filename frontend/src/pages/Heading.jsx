@@ -13,7 +13,7 @@ const Heading = ({ heading }) => {
 
   return (
     <div
-      className="w-full relative mt-5 text-center py-10"
+      className="w-full relative mt-30 text-center py-10"
       style={{
         backgroundImage: "url('./building.webp')",
         backgroundSize: "cover",

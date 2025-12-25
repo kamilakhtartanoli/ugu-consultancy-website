@@ -11,7 +11,6 @@ import IsoTabs from "./IsoTabs";
 const Home = () => {
   return (
     <>
-      <Navbar />
       <Hero />
       <ServicesCards />
       <IsoTabs />
